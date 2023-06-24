@@ -6,5 +6,6 @@ Introductory Level Julia Tutorials
 `Lesson 2`: Distribution of Numbers in Nature <br>
 `Lesson 3`: Drawing Function on Plots <br>
 `Lesson 4`: Distribution of Days in a given Time Frame <br>
-`Lesson 5`: Color Aesthetic Function
+`Lesson 5`: Color Aesthetic Function <br>
+`Lesson 6`: MLE Heatmap
 
