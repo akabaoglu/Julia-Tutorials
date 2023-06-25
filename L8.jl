@@ -1,6 +1,6 @@
 using Distributions, StatsPlots
 
-par_norm = rand(Normal(50,16.6), 10^5)
+par_norm = rand(Normal(50,10), 10^5)
 samp_norm = [rand(Poisson(x), 1000) for x in par_norm]
 samp_col = vcat([samp_norm[i] for i in 1:100]...)
 
