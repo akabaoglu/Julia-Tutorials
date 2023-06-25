@@ -7,5 +7,8 @@ Introductory Level Julia Tutorials
 `Lesson 3`: Drawing Function on Plots <br>
 `Lesson 4`: Distribution of Days in a given Time Frame <br>
 `Lesson 5`: Color Aesthetic Function <br>
-`Lesson 6`: MLE Heatmap
+`Lesson 6`: MLE Heatmap <br>
+`Lesson 7`: MLE Surface with Conditional Means <br>
+`Lesson 8`: Aggregate Poisson Samples, Uniform vs Normal Dist <br>
+`Lesson 9`: Permutation Hypothesis Test <br>
 
