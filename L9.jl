@@ -1,4 +1,4 @@
-using DataFrames, GLM, StatsBase
+using DataFrames, GLM, StatsBase, StatsPlots
 
 dat = DataFrame(dist = [16, 52, 50, 64, 20, 32, 50, 36, 26, 60], speed = [0, 1, 1, 1, 0, 1, 1, 0, 0, 0])
 
