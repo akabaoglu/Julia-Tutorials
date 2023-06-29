@@ -11,4 +11,9 @@ Introductory Level Julia Tutorials
 `Lesson 7`: MLE Surface with Conditional Means <br>
 `Lesson 8`: Aggregate Poisson Samples, Uniform vs Normal Dist <br>
 `Lesson 9`: Permutation Hypothesis Test <br>
+`Lesson 10`: Drawing Coefficient Plot <br>
+`Lesson 11`: Color Aesthetic Function with Baseline Color <br>
+`Lesson 12`: Difference in Means Estimation with Permutation Test <br>
+`Lesson 13`: Soccer Game Simulation <br>
+
 
