@@ -4,6 +4,8 @@ roster = ["Seung", "Jane", "Hyeonseo", "Zach", "Paul", "Qiaoyi", "Rahnuma", "Ale
 
 reshape(sample(roster, 9, replace = false), 3, 3)
 
+###
+
 groups = [reshape(sample(roster, 9, replace = false), 3, 3) for _ in 1:10^3]
 
 locations = [indexin(["Paul", "Zach"], groups[i]) for i in 1:10^3]
