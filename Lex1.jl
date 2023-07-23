@@ -12,7 +12,6 @@ function new_var(q)
     return df
 end
 
-
 df = DataFrame(Y = Y)
 
 r_squared = [let df_temp = new_var(i); r2(lm(Term(:Y) ~ sum(Term.(Symbol.(names(df_temp[:, Not(:Y)])))), df_temp)) end for i in 1:24]
