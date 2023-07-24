@@ -18,5 +18,4 @@ plot!(ran_cont, [coef(m_cont)'*[1, i] for i in ran_cont], c = :red, legend = :no
 p2 = @df urine_dat scatter(:UreaBin, :Calc, msw = 0, ms = 3, c = :black, alpha = .5)
 plot!(ran_bin, [coef(m_bin)'*[1, i] for i in ran_bin], c = :red, legend = :none)
 
-
 plot(p1, p2)

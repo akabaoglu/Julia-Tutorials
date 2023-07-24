@@ -15,4 +15,3 @@ fs = [f_stat(lm(@formula(Y ~ X1 + X2 + X3), DataFrame(Y = y, X1 = rand(50), X2 =
 ecdfplot(fs, xlim = (0, 6))
 plot!(0:.1:6, cdf.(FDist(3, 46), 0:.1:6), legend = :none, line = :dash)
 scatter!([f_stat(m1)], [length(filter(x -> x < f_stat(m1), fs))/10^5], c = :firebrick2)
-

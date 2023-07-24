@@ -9,7 +9,6 @@ res_u = unique(res)
 
 freq = [length(filter(x -> x == i, res)) for i in unique(res)]
 
-
 dat = DataFrame(f_score = first.(res_u), a_score = last.(res_u), freq = freq./sum(freq))
 
 function col_aes(data; baseline = nothing, pal = :default, rev = false)
@@ -26,7 +25,6 @@ function col_aes(data; baseline = nothing, pal = :default, rev = false)
         grad = (2^10)/range
         c_vals = replace(x -> x > (2^10) ? (2^10) : x < 1 ? 1 : x, round.(Int, (data .- minimum(data)) .* grad))
     end
-
 
     if rev == true
         return reverse(cgrad(pal, (2^10)))[c_vals]

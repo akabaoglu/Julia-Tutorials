@@ -21,4 +21,3 @@ lm_est = coef(lm(@formula(Y ~ X), DataFrame(X = vals[: , 1], Y = vals[: , 2])))
 scatter(vals[: , 1], vals[: , 2], ms = 3, msw = 0, c = :navyblue, label = "Data Points")
 Plots.abline!(reverse(abs_est)..., label = "Abs_Diff Fit", c = :firebrick2)
 Plots.abline!(reverse(lm_est)..., label = "LM Fit", c = :purple)
-

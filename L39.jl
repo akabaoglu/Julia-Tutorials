@@ -5,4 +5,3 @@ dat = DataFrame(x = rand(Normal(), 10^5), y = rand(Binomial(), 10^5), z = rand(P
 transform!(dat, [:x, :y, :z] => ((a, b, c) -> a + b + c) => :SUM)
 
 @df dat density(:SUM)
-

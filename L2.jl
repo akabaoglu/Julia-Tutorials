@@ -4,7 +4,6 @@ RDatasets.datasets()[578,:]
 
 dat = round.(Int, dataset("plm", "Snmesp").F)
 
-
 dat_s = string.(dat)
 
 char = [filter(isdigit, collect(i)) for i in dat_s]

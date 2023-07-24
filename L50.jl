@@ -1,9 +1,19 @@
-using Distributions, Plots, DataFrames, StatsPlots
+using Plots, Distributions, GLM, DataFrames, StatsModels, StatsPlots
 
-df = DataFrame(V1 = rand(Normal(100, 25), 100), V2 = rand(Poisson(100), 100),
-V3 = rand(NegativeBinomial(10, .3), 100))
+Y = rand(25)
+Xs = eachcol(rand(25, 50))
 
-transform!(df, [:V1, :V2, :V3] => ByRow((x, y, z) -> sqrt(x)*sqrt(y)/sqrt(z)) => :V4)
+var_names = Symbol.(string.("V", 1:50))
 
-@df df density(:V4)
+function new_var(q)
+    for i in 1:q
+    df[:, var_names[i]] = Xs[i]
+    end
+    return df
+end
 
+df = DataFrame(Y = Y)
+
+r_squared = [let df_temp = new_var(i); r2(lm(Term(:Y) ~ sum(Term.(Symbol.(names(df_temp[:, Not(:Y)])))), df_temp)) end for i in 1:24]
+
+plot(1:.01:24, map(x -> r_squared[x], map(x -> round(Int, x -.49), 1:.01:24)))

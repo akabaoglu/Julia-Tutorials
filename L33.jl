@@ -6,12 +6,10 @@ n = round(Int, N/2)
 dat = DataFrame(Treatment = repeat([1, 0], inner = n), Baseline = vcat(rand(Beta(55, 15), n), rand(Beta(60, 12), n)), Obs = 1:N)
 
 ###
-
 t = filter(:Treatment => x -> x == 1, dat)
 c = filter(:Treatment => x -> x == 0, dat)
 
 store_min = Matrix{Float64}(undef, n, 4)
-
 
 for j in 1:10^5
     t_rand = t[sample(1:n, n, replace = false), :]
@@ -44,11 +42,9 @@ for j in 1:10^5
     end
 end
 
-
 actual = sum(x -> x^2, store_min[:, 2] - store_min[:, 4]) 
 
 ### 
-
 function fx()
     let dat_sim = select(dat, [:Treatment, :Baseline], :Treatment => (x -> sample(x, N, replace = false)) => :Treatment)
 
@@ -58,7 +54,6 @@ function fx()
     return sum(x -> x^2, t_sim.Baseline - c_sim.Baseline)
     end
 end
-
 
 rand_diffs = [fx() for _ in 1:10^4]
 

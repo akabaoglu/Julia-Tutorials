@@ -7,7 +7,6 @@ plot(fx, xlim = (-10, 10), ylim = (0, 200), c = :black)
 val1 = quadgk(fx, -10, 10)[1]
 
 ###
-
 xs = rand(Uniform(-10, 10), 10^5)
 ys = rand(Uniform(0, 200), 10^5)
 
@@ -16,7 +15,6 @@ ps = [[xs[i], ys[i]] for i in 1:10^5]
 val2 = (length(filter(x -> x[2] < fx(x[1]), ps))/10^5)*4000
 
 val1 - val2
-
 
 outer = filter(x -> x[2] > fx(x[1]), ps)
 inner = filter(x -> x[2] < fx(x[1]), ps)

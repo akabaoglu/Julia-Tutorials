@@ -12,4 +12,3 @@ a = Dict("Monday" => 1, "Tuesday" => 2, "Wednesday" => 3, "Thursday" => 4,
 c_s = counts([a[i] for i in dayname.(r_dates)], 1:7)
 
 bar(1:7, c_s, c = :pink, legend = :none, xticks = (1:7, ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]))
-

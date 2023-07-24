@@ -6,7 +6,6 @@ m1 = lm(@formula(Y ~ X1 + X2), DataFrame(X1 = dat[:, 1], X2 = dat[:, 2], Y = dat
 
 r2(m1)
 
-
 function sens(q, r)
     vals = rand(MvNormal([0, 0, 0], [1 q r; q 1 .2; r .2 1]), 10^3)'
 

@@ -18,10 +18,3 @@ dim_unblocked = [let dat_temp = DataFrame(G = dat.G, T = sample(dat.T, length(da
 
 density(dim_blocked, label = "Blocked Randomization", c = :firebrick2)
 density!(dim_unblocked, label = "Regular Randomization", c = :navyblue)
-
-
-
-
-
-
-

@@ -16,4 +16,3 @@ t_vals = [fx(i) for i in x_s]
 
 scatter(x_s, t_vals, ms = 2, msw = 0, alpha = .5, c = :black)
 plot!(5:10^3, predict(loess(x_s, t_vals), 5:10^3), linewidth = 3, c = :red, legend = :none)
-

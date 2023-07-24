@@ -11,7 +11,6 @@ coefs = [[coef(glm(@formula(GDP_Bin ~ SR), sumhes[sample(1:3250, n, replace = fa
 mean.(coefs)
 density(coefs)
 
-
 coef_real = coef(glm(@formula(GDP_Bin ~ SR), sumhes, Binomial(), LogitLink()))[2]
 
 scatter(100:100:2400, abs.(mean.(coefs) .- coef_real))
